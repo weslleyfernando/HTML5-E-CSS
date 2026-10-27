@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt_-BR
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO DE REFERÊNCIA BIBLIOGRÁFICA</title>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <h2>CADASTRO DE REFERÊNCIA BIBLIOGRÁFICA</h2>
+                <p>Cadastre os livros recomendados para as disciplinas.</p>
+            </header>
+            <form action="/Salvar-livro" method="post">
+
+
+                <fieldset>
+                    <legend>Informações da Obra</legend>
+
+
+                    <p>
+                        <label for="titulo">Título do Livro:</label>
+                        <input type="text" id="titulo" name="titulo" autocomplete="titulo-livro" required>
+                    </p>
+
+
+                    <p>
+                        <label for="autores">Autor(es):</label>
+                        <input type="text" id="autores" name="titulo" autocomplete="Autores-nome" required>  
+                    </p>
+
+
+                    <p>
+                        <label for="isbn">ISBN (13 dig.):</label>
+                        <input type="text" id="isbn" name="isbn" autocomplete="827827423232" required placeholder="Digite os 13 dígitos do ISBN"
+                        minlength="13"
+                        maxlength="13">
+                    </p>
+
+
+                    <p>
+                        <label for="ano">Ano de Publicação:</label>
+                        <input type="text" id="ano" name="ano" autocomplete="ano" required placeholder="EX: 2023">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Detalhes Acadêmicos</legend>
+
+
+                    <p>
+                        <label for="curso">Curso Alvo:</label>
+                        <select id="curso" name="curso" autocomplete="curso-alvo" required>
+                            <option value="">Selecione um curso</option>
+                            <option value="ES">Engenharia de Software</option>
+                            <option value="ADS">Análise e Desenv. de Sistemas</option>
+                            <option value="TC">Tronco Comum</option>
+                        </select>
+                    </p>
+
+
+                    <p>
+                        <label for="disciplina">Disciplina</label>
+                        <input type="text" id="disciplina" name="disciplina" autocomplete="disciplina-ex" required>
+                    </p>
+
+
+                    <fieldset>
+                        <legend>Formato do Material</legend>
+
+
+                        <input type="radio" id="formato-fisico"
+                               name="formato" value="Físico" required>
+                        <label for="formato-fisico">Físico</label>
+
+
+                        <input type="radio" id="formato-digital"
+                               name="formato" value="Digital" required>
+                        <label for="formato-digital">Digital</label>
+
+
+                        <input type="radio" id="formato-hibrido"
+                               name="formato" value="Híbrido" required>
+                        <label for="formato-hibrido">Híbrido</label>
+                    </fieldset>
+                </fieldset>
+                <p>
+                    <button type="submit">Salvar Livro</button>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+
